@@ -1,16 +1,9 @@
-# onlineshop1
+# onlineshop
 
 A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+you can tak fast viwe 
+<hr>
+![Screenshot_٢٠٢٣٠٥٠٤_١٨٠٦١٤](https://user-images.githubusercontent.com/88496239/236259592-b5474119-ec9a-4011-a286-04bfe913fc99.png)
+<hr>
+![Screenshot_٢٠٢٣٠٥٠٤_١٨٠٥٥١](https://user-images.githubusercontent.com/88496239/236259602-33ca7349-43b4-441a-9240-ec849270a06a.png)
+<hr>
