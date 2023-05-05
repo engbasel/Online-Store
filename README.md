@@ -14,7 +14,12 @@ you can take fast viwe
 
 <hr>
 
-![Uploading Screenshot_٢٠٢٣٠٥٠٤_١٨٠٦١٤.png…]()
+![Stor](https://user-images.githubusercontent.com/88496239/236559867-5d5ae679-de75-4704-9977-4b4c61f1700c.png)
+
+
+<hr>
+
+![Screenshot_٢٠٢٣٠٥٠٤_١٨٠٦٣٨](https://user-images.githubusercontent.com/88496239/236559951-adcc766b-5e96-428b-807a-aedc6b3b6d23.png)
 
 
 <hr>
