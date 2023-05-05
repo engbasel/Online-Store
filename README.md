@@ -9,9 +9,8 @@ you can take fast viwe
 
 
 <hr>
+
 ![Screenshot_٢٠٢٣٠٥٠٤_١٨٠٦١٤](https://user-images.githubusercontent.com/88496239/236559557-87213d36-e373-4759-837e-99a8848f9395.png)
-
-
 
 <hr>
 
