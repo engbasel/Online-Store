@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:onlineshop1/Componant/coustomTextBoutton.dart';
 import 'package:onlineshop1/Models/ProductsModel.dart';
@@ -16,18 +15,20 @@ class UpdateProdcatPage extends StatefulWidget {
   // });
   static String Id = 'UpdateProductPage';
 
+  const UpdateProdcatPage({super.key});
+
   @override
   State<UpdateProdcatPage> createState() => _UpdateProdcatPageState();
 }
 
 class _UpdateProdcatPageState extends State<UpdateProdcatPage> {
-  dynamic? ProdactName;
+  dynamic ProdactName;
 
-  dynamic? Discription;
+  dynamic Discription;
 
-  dynamic? price;
+  dynamic price;
 
-  dynamic? image;
+  dynamic image;
   bool isloading = false;
   @override
   Widget build(BuildContext context) {
@@ -38,7 +39,7 @@ class _UpdateProdcatPageState extends State<UpdateProdcatPage> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.transparent,
-          title: Text(
+          title: const Text(
             'UpdateProdact',
             style: TextStyle(
               color: Colors.black,
@@ -52,35 +53,35 @@ class _UpdateProdcatPageState extends State<UpdateProdcatPage> {
             padding: const EdgeInsets.all(15),
             child: Column(
               children: [
-                SizedBox(height: 100),
+                const SizedBox(height: 100),
                 CustomTextField(
                     keyboardType: TextInputType.text,
                     hentText: 'New Prodact Name',
                     onChanged: (DataProdactName) {
                       ProdactName = DataProdactName;
                     }),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 CustomTextField(
                     keyboardType: TextInputType.text,
                     hentText: 'Discription',
                     onChanged: (DataDiscription) {
                       Discription = DataDiscription;
                     }),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 CustomTextField(
                     hentText: 'price',
                     keyboardType: TextInputType.number,
                     onChanged: (Dataprice) {
                       price = Dataprice;
                     }),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 CustomTextField(
                     keyboardType: TextInputType.text,
                     hentText: 'image',
                     onChanged: (Dataimagea) {
                       image = Dataimagea;
                     }),
-                SizedBox(height: 70),
+                const SizedBox(height: 70),
                 CusttomBottom(
                   TextBottom: 'Update',
                   ONtaped: () {
@@ -111,7 +112,7 @@ class _UpdateProdcatPageState extends State<UpdateProdcatPage> {
       price: price == null ? Prodact.price.toString() : price!,
       title: ProdactName == null ? Prodact.title : ProdactName!,
       description: Discription == null ? Prodact.description : Discription!,
-      image: image == null ? Prodact.image : image,
+      image: image ?? Prodact.image,
     );
   }
 }

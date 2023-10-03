@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
   CustomTextField({
+    super.key,
     required this.hentText,
     this.onChanged,
     this.keyboardType,
@@ -14,7 +15,7 @@ class CustomTextField extends StatelessWidget {
     return TextField(
       keyboardType: keyboardType,
       //
-      style: TextStyle(
+      style: const TextStyle(
         // color: Colors.white,
         fontWeight: FontWeight.bold,
         fontSize: 20,
@@ -25,14 +26,14 @@ class CustomTextField extends StatelessWidget {
         hintText: hentText,
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(35),
-          borderSide: BorderSide(
+          borderSide: const BorderSide(
             color: Colors.blueAccent,
             width: 2.5,
           ),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(35),
-          borderSide: BorderSide(
+          borderSide: const BorderSide(
             color: Colors.grey,
             width: 2.0,
           ),

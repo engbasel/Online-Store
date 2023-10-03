@@ -8,6 +8,8 @@ import '../Models/ProductsModel.dart';
 class homePage extends StatelessWidget {
   static String ID = 'homePage';
 
+  const homePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,17 +19,17 @@ class homePage extends StatelessWidget {
               onPressed: () {
                 print('Data add to your Cart');
               },
-              icon: Icon(
+              icon: const Icon(
                 FontAwesomeIcons.cartPlus,
                 color: Colors.black,
               ),
             ),
-            SizedBox(width: 10)
+            const SizedBox(width: 10)
           ],
           elevation: 0,
           centerTitle: true,
           backgroundColor: Colors.white,
-          title: Text(
+          title: const Text(
             'New Trend',
             style: TextStyle(
               color: Colors.black,
@@ -36,27 +38,35 @@ class homePage extends StatelessWidget {
             ),
           ),
         ),
-        body: FutureBuilder<List<ProductModel>>(
-            future: AllProductsService().GetAllProducts(),
-            builder: (context, snapshot) {
-              if (snapshot.hasData) {
-                List<ProductModel> prodcats = snapshot.data!;
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Expanded(
+              child: FutureBuilder<List<ProductModel>>(
+                future: AllProductsService().GetAllProducts(),
+                builder: (context, snapshot) {
+                  if (snapshot.hasData) {
+                    List<ProductModel> prodcats = snapshot.data!;
 
-                return GridView.builder(
-                  itemCount: prodcats.length,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    childAspectRatio: 1.5,
-                    // crossAxisSpacing: 10,
-                    // mainAxisSpacing: 5,
-                  ),
-                  itemBuilder: (context, index) {
-                    return CoustomCard(Prodact: prodcats[index]);
-                  },
-                );
-              } else {
-                return Center(child: CircularProgressIndicator());
-              }
-            }));
+                    return GridView.builder(
+                      itemCount: prodcats.length,
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        childAspectRatio: 1.5,
+                      ),
+                      itemBuilder: (context, index) {
+                        return CoustomCard(Prodact: prodcats[index]);
+                      },
+                    );
+                  } else {
+                    return const CircularProgressIndicator();
+                  }
+                },
+              ),
+            ),
+          ],
+        ));
   }
 }

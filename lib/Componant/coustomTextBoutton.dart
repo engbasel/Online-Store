@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CusttomBottom extends StatelessWidget {
-  CusttomBottom({required this.TextBottom, this.ONtaped});
+  CusttomBottom({super.key, required this.TextBottom, this.ONtaped});
   String? TextBottom;
   VoidCallback? ONtaped;
   @override
@@ -18,7 +18,7 @@ class CusttomBottom extends StatelessWidget {
         child: Center(
           child: Text(
             TextBottom!,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 20.0,
               fontWeight: FontWeight.bold,

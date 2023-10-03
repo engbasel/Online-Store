@@ -4,7 +4,7 @@ import 'package:onlineshop1/sscreens/UpdateProdactPage.dart';
 import '../Models/ProductsModel.dart';
 
 class CoustomCard extends StatelessWidget {
-  CoustomCard({required this.Prodact});
+  CoustomCard({super.key, required this.Prodact});
   double heightCard = 130;
   double widthCard = 220;
   ProductModel Prodact;
@@ -18,7 +18,7 @@ class CoustomCard extends StatelessWidget {
         clipBehavior: Clip.none,
         children: [
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               boxShadow: [
                 BoxShadow(
                   color: Colors.grey,
@@ -33,7 +33,7 @@ class CoustomCard extends StatelessWidget {
             child: Card(
               elevation: 10,
               child: Padding(
-                padding: EdgeInsets.only(
+                padding: const EdgeInsets.only(
                   left: 10.0,
                   right: 5,
                   bottom: 0,
@@ -45,7 +45,7 @@ class CoustomCard extends StatelessWidget {
                   children: [
                     Text(
                       Prodact.description.substring(0, 10),
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontWeight: FontWeight.w500,
                         color: Colors.grey,
                         fontSize: 16.0,
@@ -55,18 +55,18 @@ class CoustomCard extends StatelessWidget {
                       children: [
                         Text(
                           r'$' '${Prodact.price.toString()}',
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
                             fontSize: 16,
                           ),
                         ),
-                        Spacer(
+                        const Spacer(
                           flex: 1,
                         ),
                         IconButton(
                           onPressed: () {},
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.favorite,
                             color: Colors.red,
                           ),
@@ -79,8 +79,8 @@ class CoustomCard extends StatelessWidget {
             ),
           ),
           Positioned(
-            right: 10,
-            bottom: 170,
+            right: 200,
+            bottom: 180,
             child: Image.network(
               Prodact.image,
               height: 70,

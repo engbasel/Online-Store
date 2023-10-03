@@ -50,7 +50,7 @@ class Api {
   Future<dynamic> put({
     required dynamic url,
     @required dynamic body,
-    @required dynamic? token,
+    @required dynamic token,
   }) async {
     Map<String, String> headers = {};
     headers.addAll({'Content-Type': 'application/x-www-form-urlencoded'});
